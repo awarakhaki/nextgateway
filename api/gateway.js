@@ -162,7 +162,7 @@ module.exports = async (req, res) => {
 
     // Always return application/json
     res.setHeader('Content-Type', 'application/json; charset=utf-8');
-    res.status(200).send(parsed);
+    res.send(parsed);
   } catch (err) {
     clearTimeout(id);
     // Distinguish timeout abort
@@ -174,4 +174,5 @@ module.exports = async (req, res) => {
     }
   }
 };
+
 
