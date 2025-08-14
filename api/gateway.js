@@ -1,7 +1,7 @@
 // api/gateway.js
 // Deploy this in your Vercel project under /api/gateway.js
 
-const ORIGIN_URL = process.env.ORIGIN_URL || 'https://awaki.top/awakisoftsgateway.php';
+const ORIGIN_URL = process.env.ORIGIN_URL || 'https://awakiplayer.awaki.top/api_v34.php';
 
 module.exports = async (req, res) => {
   try {
@@ -41,3 +41,4 @@ module.exports = async (req, res) => {
     res.status(500).json({ error: 'gateway_error', detail: String(err.message || err) });
   }
 };
+
